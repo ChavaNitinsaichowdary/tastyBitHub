@@ -10,7 +10,7 @@ const Rescard = (props)=>{
       cuisines,
       costForTwo,
       deliveryTime
-    } = resData?.data;
+    } = resData?.info;
     return (
       <div className='resCard' style={{backgroundColor : '#f0f0f0'}}>
          <img className = 'resLogo'
@@ -19,7 +19,7 @@ const Rescard = (props)=>{
          <h3>{name}</h3>
          <h4>{cuisines.join(", ")}</h4>
          <h4>{avgRating}</h4>
-         <h4>cost for two {costForTwo/100}</h4>
+         <h4>{costForTwo}</h4>
          <h4>{deliveryTime}</h4>
       </div>
     );
